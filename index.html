@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Finder</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>🌐 Discover Your Tech Tribe</h1>
+    <p>Find and join the most active communities based on your interests.</p>
+
+    <div class="auth-box">
+      <h2>Login or Sign Up</h2>
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <div class="buttons">
+        <button onclick="signUp()">Sign Up</button>
+        <button onclick="login()">Login</button>
+      </div>
+    </div>
+
+    <div id="interestForm" class="interest-box hidden">
+      <h3>What are you interested in?</h3>
+      <label><input type="checkbox" value="AI" /> Artificial Intelligence</label>
+      <label><input type="checkbox" value="Web Development" /> Web Development</label>
+      <label><input type="checkbox" value="Cybersecurity" /> Cybersecurity</label>
+      <label><input type="checkbox" value="UI/UX Design" /> UI/UX Design</label>
+      <button onclick="submitInterests()">Find Communities</button>
+    </div>
+
+    <div id="results" class="results"></div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
